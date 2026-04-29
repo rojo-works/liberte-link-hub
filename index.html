@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPO法人リベルテ｜公式リンク集</title>
+  <meta name="description" content="NPO法人リベルテ（長野・上田）の公式サイト・SNSへのリンク集。表現・ケア・地域の3軸で活動しています。">
+  <meta name="theme-color" content="#00aa71">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="NPO法人リベルテ｜公式リンク集">
+  <meta property="og:description" content="NPO法人リベルテ（長野・上田）の公式サイト・SNSへのリンク集。">
+  <meta property="og:url" content="https://link.npo-liberte.org/">
+  <meta property="og:site_name" content="NPO法人リベルテ">
+  <meta property="og:image" content="https://npo-liberte.org/cms/wp-content/uploads/2024/10/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f4f4ef;
+      --card-bg: #ffffff;
+      --text: #343b42;
+      --text-sub: #718999;
+      --accent: #00aa71;
+      --accent-yellow: #fbd500;
+      --border: rgba(52,59,66,.12);
+      --shadow: rgba(52,59,66,.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: "Noto Sans JP", YuGothic, "Yu Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Helvetica Neue", Arial, Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 20px 48px;
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: var(--bg-pattern, none);
+      background-repeat: repeat;
+      background-size: 360px 360px;
+      opacity: 0.3;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    body[data-bg="color"] { --bg-pattern: url('assets/bg-color.png'); }
+    body[data-bg="mono"]  { --bg-pattern: url('assets/bg-mono.png');  }
+    body[data-bg="none"]  { --bg-pattern: none; }
+
+    .bg-toggle {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 100;
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: 0 2px 8px var(--shadow);
+      font-size: 11px;
+    }
+    .bg-toggle button {
+      border: 0;
+      background: transparent;
+      color: var(--text-sub);
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 500;
+    }
+    .bg-toggle button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 28px 22px 26px;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 2px var(--shadow);
+    }
+
+    .logo {
+      width: 240px;
+      height: auto;
+      max-width: 80%;
+    }
+
+    .catchphrase {
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      color: var(--text-sub);
+      text-align: center;
+    }
+
+    .catchphrase .jp {
+      display: block;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .description {
+      font-size: 14px;
+      color: var(--text-sub);
+      text-align: center;
+      line-height: 1.85;
+      padding: 0 8px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--card-bg);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 2px var(--shadow);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .link:hover, .link:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px var(--shadow);
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .link.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .link.primary .icon { color: #fff; }
+    .link.primary .label-sub { color: rgba(255,255,255,.85); }
+    .link.primary:hover { box-shadow: 0 4px 16px rgba(0,170,113,.3); }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .label {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .label-main { font-size: 15px; }
+    .label-sub { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
+
+    .arrow {
+      flex-shrink: 0;
+      color: var(--text-sub);
+      font-size: 18px;
+      opacity: .6;
+    }
+
+    .link.primary .arrow { color: rgba(255,255,255,.7); }
+
+    .footer {
+      margin-top: 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-sub);
+      text-align: center;
+    }
+
+    .footer a {
+      color: var(--text-sub);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 380px) {
+      body { padding: 24px 16px 40px; }
+      .container { gap: 24px; }
+      .link { padding: 14px 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .link { transition: none; }
+      .link:hover { transform: none; }
+    }
+  </style>
+</head>
+<body data-bg="color">
+  <div class="bg-toggle" role="group" aria-label="背景プレビュー切替">
+    <button type="button" data-set="color" aria-pressed="true">カラー</button>
+    <button type="button" data-set="mono" aria-pressed="false">モノクロ</button>
+    <button type="button" data-set="none" aria-pressed="false">なし</button>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <a href="https://npo-liberte.org" aria-label="NPO法人リベルテ 公式サイト">
+        <img class="logo" src="assets/logo-horizontal.svg" alt="NPO法人リベルテ" width="240" height="80">
+      </a>
+      <p class="catchphrase">
+        <span class="jp">「何気ない自由」や「権利」を尊重できる<br>社会と関係を目指して。</span>
+      </p>
+      <p class="description">
+        上田市街にアトリエ2つ、交差点にある喫茶店、小さな公園を拠点に<br>
+        福祉・文化・出会いと発見創造の事業を行っています。
+      </p>
+    </header>
+
+    <nav class="links" aria-label="公式リンク">
+      <a class="link primary" href="https://npo-liberte.org" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 12L12 3l9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">公式サイト</span>
+          <span class="label-sub">npo-liberte.org</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link" href="https://www.instagram.com/npo_liberte/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">Instagram</span>
+          <span class="label-sub">@npo_liberte</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link" href="https://www.facebook.com/NpoLiberte" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">Facebook</span>
+          <span class="label-sub">@NpoLiberte</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link" href="https://liberte.buyshop.jp/" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">オンラインストア</span>
+          <span class="label-sub">liberte.buyshop.jp</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link" href="https://note.com/npo_liberte" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M5 4h12a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a1 1 0 0 1 1-1zm2 4v9h2.5l4.7-6.3V17H17V8h-2.5L9.8 14.3V8z"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">note</span>
+          <span class="label-sub">@npo_liberte</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link" href="https://www.youtube.com/channel/UCiB18XW8PVcMlGxOXQTb7Ig" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">YouTube</span>
+          <span class="label-sub">公式チャンネル</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="link" href="https://x.com/npo_liberte" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        <span class="label">
+          <span class="label-main">X (Twitter)</span>
+          <span class="label-sub">@npo_liberte</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+    <footer class="footer">
+      <p>〒386-0023 長野県上田市中央西1丁目9-5</p>
+      <p>TEL 0268-71-7358 / <a href="mailto:info_lbrt@npo-liberte.org">info_lbrt@npo-liberte.org</a></p>
+      <p>&copy; NPO法人リベルテ</p>
+    </footer>
+  </main>
+
+  <script>
+    (function(){
+      const body = document.body;
+      const toggle = document.querySelector('.bg-toggle');
+      const saved = localStorage.getItem('lbrt-link-bg');
+      if (saved) body.dataset.bg = saved;
+      function sync(){
+        toggle.querySelectorAll('button').forEach(b => {
+          b.setAttribute('aria-pressed', b.dataset.set === body.dataset.bg ? 'true' : 'false');
+        });
+      }
+      sync();
+      toggle.addEventListener('click', e => {
+        const btn = e.target.closest('button[data-set]');
+        if (!btn) return;
+        body.dataset.bg = btn.dataset.set;
+        localStorage.setItem('lbrt-link-bg', btn.dataset.set);
+        sync();
+      });
+    })();
+  </script>
+</body>
+</html>
